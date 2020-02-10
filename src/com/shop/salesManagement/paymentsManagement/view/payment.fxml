@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="937.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shop.salesManagement.paymentsManagement.PaymentController">
+   <children>
+      <AnchorPane layoutX="1.0" prefHeight="518.0" prefWidth="877.0">
+         <children>
+            <VBox layoutX="3.0" layoutY="86.0" prefHeight="421.0" prefWidth="931.0">
+               <children>
+                  <AnchorPane prefHeight="416.0" prefWidth="762.0">
+                     <children>
+                        <GridPane layoutX="27.0" layoutY="-4.0" prefHeight="35.0" prefWidth="256.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.5999755859375" minWidth="10.0" prefWidth="122.5999755859375" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.20001220703125" minWidth="10.0" prefWidth="119.4000244140625" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="fieldAmount" prefHeight="27.0" prefWidth="127.0" promptText="total" style="-fx-border-color: #05071F;" GridPane.columnIndex="1" />
+                              <Label prefHeight="34.0" prefWidth="122.0" text="Total to pay:">
+                                 <font>
+                                    <Font name="Bell MT" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <TableView fx:id="payTable" layoutX="27.0" layoutY="75.0" prefHeight="290.0" prefWidth="718.0">
+                          <columns>
+                            <TableColumn fx:id="codeColumn" prefWidth="115.19998168945312" text="paymentCode" />
+                            <TableColumn fx:id="paymentDateColumn" prefWidth="124.00001525878906" text="Date" />
+                              <TableColumn fx:id="bankColumn" prefWidth="96.0" text="Bank" />
+                              <TableColumn fx:id="etatColumn" prefWidth="141.60003662109375" text="Etat" />
+                              <TableColumn fx:id="amountColumn" prefWidth="119.199951171875" text="Amount" />
+                              <TableColumn fx:id="typeColumn" prefWidth="119.199951171875" text="Type" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonDelete" disable="true" layoutX="544.0" layoutY="378.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="88.0" style="-fx-border-color: #05071F; -fx-border-radius: 20; -fx-background-color: transparent;" text="Delete">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="buttonSave" layoutX="657.0" layoutY="378.0" mnemonicParsing="false" onAction="#save" prefHeight="27.0" prefWidth="88.0" style="-fx-border-color: #05071F; -fx-border-radius: 20; -fx-background-color: transparent;" text="Save">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label layoutX="27.0" layoutY="376.0" prefHeight="32.0" prefWidth="76.0" text=" Reste:">
+                           <font>
+                              <Font name="Bell MT Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="40.0" prefHeight="34.0" prefWidth="122.0" text="Select an item">
+                           <font>
+                              <Font name="Bell MT" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonAdd" layoutX="623.0" layoutY="-3.0" mnemonicParsing="false" onAction="#addPay" prefHeight="27.0" prefWidth="121.0" style="-fx-border-color: #05071F; -fx-border-radius: 20; -fx-background-color: transparent;" text="transfer">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <TextField fx:id="fieldCheque" layoutX="421.0" layoutY="-3.0" prefHeight="27.0" prefWidth="167.0" promptText="Cheaque" style="-fx-border-color: #05071F;" />
+                        <Label layoutX="299.0" layoutY="-6.0" prefHeight="34.0" prefWidth="122.0" text="Cheque number:">
+                           <font>
+                              <Font name="Bell MT" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <Label layoutX="14.0" layoutY="21.0" text="Payments Management" textFill="#05071f">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
